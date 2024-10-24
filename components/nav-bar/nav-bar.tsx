@@ -1,28 +1,32 @@
-import Link from "next/link";
+'use client'
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 export default function NavBar() {
   return (
     <header>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link href="/projects/project-1">Project 1</Link>
-        </li>
-        <li>
-          <Link href="/projects/project-2">Project 2</Link>
-        </li>
-        <li>
-          <Link href="/projects/project-3">Project 3</Link>
-        </li>
-      </ul>
+      <Navbar>
+        <Container>
+          <Navbar.Brand href="/">Milos Kallai</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse>
+            <Nav>
+              <NavDropdown title="Projects">
+                <NavDropdown.Item href="/projects/project-1">
+                 Project 1
+                </NavDropdown.Item>
+                <NavDropdown.Item href="/projects/project-2">
+                 Project 2
+                </NavDropdown.Item>
+                <NavDropdown.Item  href="/projects/project-3">
+                Project 3
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 }
