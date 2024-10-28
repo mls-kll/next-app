@@ -1,5 +1,8 @@
 import { ProjectCard } from "@/components/project-card/project-card";
 import { Project } from "@/types/types";
+import { Col, Container, Row } from "react-bootstrap";
+
+import styles from "./page.module.scss";
 
 export default function ProjectsPage() {
   const projects: Project[] = [
@@ -31,16 +34,34 @@ export default function ProjectsPage() {
       coverImage: "/placeholder-cover.jpg",
       images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
     },
+    {
+      title: "Project 5",
+      id: "5",
+      description: "This is project 5",
+      coverImage: "/placeholder-cover.jpg",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    },
+    {
+      title: "Project 6",
+      id: "6",
+      description: "This is project 6",
+      coverImage: "/placeholder-cover.jpg",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    },
   ];
 
   return (
     <div>
       <h1>Projects</h1>
-      <div>
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
+      <Container fluid className={styles.projectContainer}>
+        <Row xs={1} sm={2} md={3} lg={4}>
+          {projects.map((project) => (
+            <Col key={project.id}>
+              <ProjectCard project={project} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 }
