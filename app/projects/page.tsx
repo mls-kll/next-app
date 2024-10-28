@@ -1,44 +1,44 @@
-import Image from "next/image";
+import { ProjectCard } from "@/components/project-card/project-card";
+import { Project } from "@/types/types";
 
 export default function ProjectsPage() {
-  type Project = {
-    title: string;
-    description: string;
-    coverImage: string;
-    images: string[];
-  }
-  
   const projects: Project[] = [
     {
       title: "Project 1",
+      id: "1",
       description: "This is project 1",
-      coverImage: "/../../public/placeholder-cover.jpg",
-      images: [
-        "/../../public/placeholder.svg",
-        "/../../public/placeholder.svg",
-        "/../../public/placeholder.svg",
-        "/../../public/placeholder.svg",
-        "/../../public/placeholder.svg",
-      ],
+      coverImage: "/placeholder-cover.jpg",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    },
+    {
+      title: "Project 2",
+      id: "2",
+      description: "This is project 2",
+      coverImage: "/placeholder-cover.jpg",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    },
+    {
+      title: "Project 3",
+      id: "3",
+      description: "This is project 3",
+      coverImage: "/placeholder-cover.jpg",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    },
+    {
+      title: "Project 4",
+      id: "4",
+      description: "This is project 4",
+      coverImage: "/placeholder-cover.jpg",
+      images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
     },
   ];
+
   return (
     <div>
       <h1>Projects</h1>
       <div>
         {projects.map((project) => (
-          <div key={project.title}>
-            <Image
-              src={project.coverImage}
-              alt={project.title}
-              width={200}
-              height={150}
-            />
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-            <div>
-            </div>
-          </div>
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </div>
