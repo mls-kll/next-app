@@ -4,4 +4,5 @@ export type Project = {
   description: string;
   coverImage: string;
   images: string[];
+  slug: string;
 };
