@@ -6,7 +6,13 @@ export const projects: Project[] = [
     id: "1",
     description: "This is project 1",
     coverImage: "/placeholder-cover.jpg",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: [
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+    ],
     slug: "project-1",
   },
   {
@@ -14,7 +20,13 @@ export const projects: Project[] = [
     id: "2",
     description: "This is project 2",
     coverImage: "/placeholder-cover.jpg",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: [
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+    ],
     slug: "project-2",
   },
   {
@@ -22,7 +34,13 @@ export const projects: Project[] = [
     id: "3",
     description: "This is project 3",
     coverImage: "/placeholder-cover.jpg",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: [
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+    ],
     slug: "project-3",
   },
   {
@@ -30,7 +48,13 @@ export const projects: Project[] = [
     id: "4",
     description: "This is project 4",
     coverImage: "/placeholder-cover.jpg",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: [
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+    ],
     slug: "project-4",
   },
   {
@@ -38,7 +62,13 @@ export const projects: Project[] = [
     id: "5",
     description: "This is project 5",
     coverImage: "/placeholder-cover.jpg",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: [
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+    ],
     slug: "project-5",
   },
   {
@@ -46,7 +76,13 @@ export const projects: Project[] = [
     id: "6",
     description: "This is project 6",
     coverImage: "/placeholder-cover.jpg",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: [
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+      { src: "/placeholder.svg", altText: "placeholder" },
+    ],
     slug: "project-6",
   },
 ];

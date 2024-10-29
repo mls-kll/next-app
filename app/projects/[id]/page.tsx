@@ -1,3 +1,4 @@
+import { ImageContainer } from "@/components/image-container/image-container";
 import { projects } from "@/mocks/projects";
 
 type Params = {
@@ -11,9 +12,7 @@ export default async function ProjectPage({ params }: { params: Params }) {
     <div>
       <h1>{projectItem?.title}</h1>
       <div>{projectItem?.description}</div>
-      <div>
-        <div>image container</div>
-      </div>
+      <ImageContainer images={projectItem?.images || []} />
     </div>
   );
 }
