@@ -1,3 +1,4 @@
-export default function ContactPage () {
-  return(<h1>Contact</h1>)
+export default function ContactPage() {
+  // form spree
+  return <h1>Contact</h1>;
 }
