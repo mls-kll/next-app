@@ -54,7 +54,7 @@ export const ContactForm = () => {
         type="submit"
         disabled={state.submitting}
       >
-        Close
+        Submit
       </Button>
     </form>
   );

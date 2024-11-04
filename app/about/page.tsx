@@ -1,29 +1,53 @@
+import styles from "./about.module.scss";
+
 export default function AboutPage() {
   return (
     <div>
-      <h4>Group Exhibitions</h4>
-      <ul>
+      <h2 className={styles.listTitle}>Group Exhibitions</h2>
+      <ul className={styles.list}>
         <li>
-          2024 - Photobook Workshop Exhibition, Budapest, Lehetőségek Tere
+          <span className={styles.date}>2024</span>
+          <span className={styles.text}>
+            Photobook Workshop Exhibition, Budapest, Lehetőségek Tere
+          </span>
         </li>
         <li>
-          2024 - MOME Open - Autumn Workshop Exhibition, Budapest, Moholy-Nagy
-          University of Art and Design
+          <span className={styles.date}>2024</span>
+          <span className={styles.text}>
+            MOME Open - Autumn Workshop Exhibition, Budapest, Moholy-Nagy
+            University of Art and Design
+          </span>
         </li>
         <li>
-          2023 – 2024 - Homecoming: Biennial Exhibition, Rochester, NY, RIT City
-          Art Space
+          <span className={styles.date}>2023 – 2024</span>
+          <span className={styles.text}>
+            Homecoming: Biennial Exhibition, Rochester, NY, RIT City Art Space
+          </span>
         </li>
         <li>
-          2023 - METU Photography Graduation Exhibition, Budapest, FUGA Budapest
-          Center of Architecture
+          <span className={styles.date}>2023</span>
+          <span className={styles.text}>
+            METU Photography Graduation Exhibition, Budapest, FUGA Budapest
+            Center of Architecture
+          </span>
         </li>
       </ul>
-      <h4>Publications</h4>
-      <ul>
-        <li>2024 - Zone Magazine Collective Book - 4.</li>
-        <li>2023 - Homecoming 2022 & 2023 Catalog</li>
-        <li>2023 - Zoink: Milos Kallai - Weekend</li>
+      <h2 className={styles.listTitle}>Publications</h2>
+      <ul className={styles.list}>
+        <li>
+          <span className={styles.date}>2024</span>
+          <span className={styles.text}>
+            Zone Magazine Collective Book - 4.
+          </span>
+        </li>
+        <li>
+          <span className={styles.date}>2023</span>
+          <span className={styles.text}>Homecoming 2022 & 2023 Catalog</span>
+        </li>
+        <li>
+          <span className={styles.date}>2023</span>
+          <span className={styles.text}>Zoink: Milos Kallai - Weekend</span>
+        </li>
       </ul>
     </div>
   );
