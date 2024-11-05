@@ -10,7 +10,7 @@ export default function NavBar() {
           <Navbar.Brand href="/">Milos Kallai</Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Nav.Link className={styles.navItem} href="/projects">
+            <Nav.Link className={styles.navItem} href="/">
               Projects
             </Nav.Link>
             <Nav.Link className={styles.navItem} href="/about">
