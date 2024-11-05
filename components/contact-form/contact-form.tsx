@@ -5,7 +5,7 @@ import styles from "./contact-form.module.scss";
 import { Button } from "react-bootstrap";
 
 export const ContactForm = () => {
-  const [state, handleSubmit] = useForm("xdkoeepp");
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM_ID || "");
   if (state.succeeded) {
     return <div>Thank you for your message</div>;
   }
