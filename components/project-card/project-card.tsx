@@ -11,14 +11,13 @@ type Props = {
 
 export const ProjectCard = ({ project }: Props) => {
   return (
-    <Link href={`projects/${project.url}`}>
+    <Link href={`projects/${project.url}`} className={styles.projectCardRoot}>
       <Image
         className={styles.coverImage}
         src={project.cover.fields.file?.url as string}
         alt={project.title}
       />
-      <h3>{project.title}</h3>
-      <div></div>
+      <p className={styles.projectTitle}>{project.title}</p>
     </Link>
   );
 };

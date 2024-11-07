@@ -1,54 +1,18 @@
-import styles from "./about.module.scss";
+import { MilestoneList } from "@/components/milestones-list/milestone-list";
+import getContent from "@/utils/get-content";
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const aboutData = await getContent("about");
+
   return (
-    <div>
-      <h2 className={styles.listTitle}>Group Exhibitions</h2>
-      <ul className={styles.list}>
-        <li>
-          <span className={styles.date}>2024</span>
-          <span className={styles.text}>
-            Photobook Workshop Exhibition, Budapest, Lehetőségek Tere
-          </span>
-        </li>
-        <li>
-          <span className={styles.date}>2024</span>
-          <span className={styles.text}>
-            MOME Open - Autumn Workshop Exhibition, Budapest, Moholy-Nagy
-            University of Art and Design
-          </span>
-        </li>
-        <li>
-          <span className={styles.date}>2023 – 2024</span>
-          <span className={styles.text}>
-            Homecoming: Biennial Exhibition, Rochester, NY, RIT City Art Space
-          </span>
-        </li>
-        <li>
-          <span className={styles.date}>2023</span>
-          <span className={styles.text}>
-            METU Photography Graduation Exhibition, Budapest, FUGA Budapest
-            Center of Architecture
-          </span>
-        </li>
-      </ul>
-      <h2 className={styles.listTitle}>Publications</h2>
-      <ul className={styles.list}>
-        <li>
-          <span className={styles.date}>2024</span>
-          <span className={styles.text}>
-            Zone Magazine Collective Book - 4.
-          </span>
-        </li>
-        <li>
-          <span className={styles.date}>2023</span>
-          <span className={styles.text}>Homecoming 2022 & 2023 Catalog</span>
-        </li>
-        <li>
-          <span className={styles.date}>2023</span>
-          <span className={styles.text}>Zoink: Milos Kallai - Weekend</span>
-        </li>
-      </ul>
-    </div>
+    <>
+      {aboutData?.map((about) => (
+        <MilestoneList
+          key={about.fields.title as string}
+          listTitle={about.fields.title as unknown as string}
+          milestones={about.fields}
+        />
+      ))}
+    </>
   );
 }
