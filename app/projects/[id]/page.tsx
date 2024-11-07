@@ -2,6 +2,8 @@ import { ImageContainer } from "@/components/image-container/image-container";
 import { ProjectImage } from "@/types/types";
 import getContent from "@/utils/get-content";
 import { Asset } from "contentful-management/dist/typings/export-types";
+import { Col, Row } from "react-bootstrap";
+import styles from "./projects.module.scss";
 
 type Params = {
   id: string;
@@ -19,8 +21,14 @@ export default async function ProjectPage({ params }: { params: Params }) {
 
   return (
     <div>
-      <h1>{projectItem?.title as string}</h1>
-      <div>{projectItem?.description as string}</div>
+      <Row xs={1} sm={1} md={1} lg={2}>
+        <Col>
+          <h2>{projectItem?.title as string}</h2>
+          <div className={styles.projectDescription}>
+            {projectItem?.description as string}
+          </div>
+        </Col>
+      </Row>
       <ImageContainer
         images={(projectImages as unknown as ProjectImage[]) || []}
       />

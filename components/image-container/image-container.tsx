@@ -12,17 +12,15 @@ type Props = {
 
 export const ImageContainer = ({ images }: Props) => {
   return (
-    <>
-      <Container className={styles.scrollContainer}>
-        {images.map((image) => (
-          <Image
-            key={image.title}
-            className={styles.projectImage}
-            src={image.src}
-            alt={image.title}
-          />
-        ))}
-      </Container>
-    </>
+    <Container className={styles.scrollContainer}>
+      {images.map((image) => (
+        <Image
+          key={image.title}
+          className={styles.projectImage}
+          src={image.src}
+          alt={image.title}
+        />
+      ))}
+    </Container>
   );
 };
