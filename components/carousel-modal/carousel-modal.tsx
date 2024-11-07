@@ -26,7 +26,7 @@ export const CarouselModal = ({ images, setShowCarousel }: Props) => {
             <Carousel.Item key={index}>
               <Image
                 src={image.src}
-                alt={image.altText}
+                alt={image.title}
                 className="d-block w-100"
               />
             </Carousel.Item>

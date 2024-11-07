@@ -1,6 +1,6 @@
 export type ProjectImage = {
   src: string;
-  altText: string;
+  title: string;
 };
 
 export type Project = {

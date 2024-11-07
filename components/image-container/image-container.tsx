@@ -28,7 +28,7 @@ export const ImageContainer = ({ images }: Props) => {
               <Image
                 className={styles.projectImage}
                 src={image.src}
-                alt={image.altText}
+                alt={image.title}
                 onClick={() => handleImageClick()}
               />
             </Col>
