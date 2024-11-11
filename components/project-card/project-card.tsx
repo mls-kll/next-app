@@ -3,10 +3,10 @@ import Image from "react-bootstrap/Image";
 
 import styles from "./project-card.module.scss";
 import Link from "next/link";
-import { IProjectsFields } from "@/types/generated/contentful";
+import { ProjectFields } from "@/types/project";
 
 type Props = {
-  project: IProjectsFields;
+  project: ProjectFields;
 };
 
 export const ProjectCard = ({ project }: Props) => {

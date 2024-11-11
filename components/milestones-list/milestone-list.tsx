@@ -1,12 +1,11 @@
-import { IAboutFields } from "@/types/generated/contentful";
+import { AboutFields } from "@/types/about";
 import styles from "./milestone-list.module.scss";
 
 type Props = {
   listTitle: string;
-  milestones: IAboutFields;
+  milestones: AboutFields;
 };
 export const MilestoneList = ({ milestones }: Props) => {
-  console.log("milestones", milestones);
   return (
     <div>
       <h2 className={styles.listTitle}>{milestones?.title}</h2>
