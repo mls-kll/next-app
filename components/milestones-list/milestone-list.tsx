@@ -1,19 +1,19 @@
-import { AboutFields } from "@/types/about";
+import { MilestoneFields } from "@/types/about";
 import styles from "./milestone-list.module.scss";
 
 type Props = {
   listTitle: string;
-  milestones: AboutFields;
+  milestones: MilestoneFields[];
 };
-export const MilestoneList = ({ milestones }: Props) => {
+export const MilestoneList = ({ milestones, listTitle }: Props) => {
   return (
     <div>
-      <h2 className={styles.listTitle}>{milestones?.title}</h2>
+      <h2 className={styles.listTitle}>{listTitle}</h2>
       <ul className={styles.list}>
-        {milestones?.mileStone?.map((item) => (
-          <li key={item.fields.description}>
-            <span className={styles.date}>{item.fields.date}</span>
-            <span className={styles.text}>{item.fields.description}</span>
+        {milestones?.map((item) => (
+          <li key={item.description}>
+            <span className={styles.date}>{item.date}</span>
+            <span className={styles.text}>{item.description}</span>
           </li>
         ))}
       </ul>

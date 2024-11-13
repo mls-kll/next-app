@@ -1,16 +1,16 @@
 import { MilestoneList } from "@/components/milestones-list/milestone-list";
-import { AboutData } from "@/types/about";
-import getContent from "@/utils/get-content";
+import { getAboutData } from "@/utils/get-content";
 
 export default async function AboutPage() {
-  const aboutData = await getContent("about");
+  const aboutData = await getAboutData();
+  console.log(aboutData);
   return (
     <>
-      {(aboutData as AboutData[])?.map((about: AboutData) => (
+      {aboutData?.map((about) => (
         <MilestoneList
-          key={about.fields.title}
-          listTitle={about.fields.title}
-          milestones={about.fields}
+          key={about.title}
+          listTitle={about.title}
+          milestones={about.milestones}
         />
       ))}
     </>

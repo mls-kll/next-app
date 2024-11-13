@@ -1,3 +1,4 @@
+import { AboutData } from "@/types/about";
 import { createClient } from "contentful";
 
 const client = createClient({
@@ -10,6 +11,23 @@ export default async function getContent(contentType: string, url?: string) {
     content_type: contentType,
     ...(url && { "fields.url[in]": url }),
   });
-  if (entries.items) return entries.items;
-  console.log(`Error getting Entries for ${contentType}.`);
+  return (entries.items as AboutData[]) || [];
 }
+
+export const getAboutData = async () => {
+  const data = await getContent("about");
+
+  return data.map((about) => ({
+    title: about.fields.title,
+    milestones: about.fields.mileStone
+      ? about.fields.mileStone?.map((milestone) => ({
+          date: milestone.fields.date,
+          description: milestone.fields.description,
+        }))
+      : [],
+  }));
+};
+
+// get projects
+
+// get projectById
