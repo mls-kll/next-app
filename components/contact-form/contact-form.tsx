@@ -49,7 +49,7 @@ export const ContactForm = () => {
 
       <Button
         className={styles.submitButton}
-        variant="primary"
+        variant="outline-dark"
         size="sm"
         type="submit"
         disabled={state.submitting}
