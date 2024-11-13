@@ -12,7 +12,7 @@ export default async function ProjectsPage() {
       <Container fluid className={styles.projectContainer}>
         <Row xs={1} sm={2} md={3} lg={4}>
           {projectData?.map((project) => (
-            <Col key={project.title}>
+            <Col key={project.title} lg={4}>
               <ProjectCard project={project} />
             </Col>
           ))}
