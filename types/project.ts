@@ -42,3 +42,11 @@ export type Project = {
   sys: Sys;
   fields: ProjectFields;
 };
+
+export type ProjectCardProps = {
+  title: string;
+  date: string;
+  description: string;
+  coverImage: string;
+  url: string;
+};
