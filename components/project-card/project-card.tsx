@@ -17,7 +17,9 @@ export const ProjectCard = ({ project }: Props) => {
         src={project.coverImage as string}
         alt={project.title}
       />
-      <p className={styles.projectTitle}>{project.title}</p>
+      <p className={styles.projectTitle}>
+        {project.title} ({project.date})
+      </p>
     </Link>
   );
 };
