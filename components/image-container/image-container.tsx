@@ -13,12 +13,12 @@ type Props = {
 export const ImageContainer = ({ images }: Props) => {
   return (
     <Container className={styles.scrollContainer}>
-      {images.map((image) => (
+      {images?.map((image) => (
         <Image
-          key={image.title}
+          key={image?.title}
           className={styles.projectImage}
-          src={image.src}
-          alt={image.title}
+          src={image?.src}
+          alt={image?.title}
         />
       ))}
     </Container>

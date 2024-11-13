@@ -3,7 +3,6 @@ import { getAboutData } from "@/utils/get-content";
 
 export default async function AboutPage() {
   const aboutData = await getAboutData();
-  console.log(aboutData);
   return (
     <>
       {aboutData?.map((about) => (

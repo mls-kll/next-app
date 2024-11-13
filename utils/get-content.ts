@@ -40,4 +40,17 @@ export const getProjectCardData = async () => {
   }));
 };
 
-// get projectById
+export const getProjectDataById = async (id: string) => {
+  const data = await getContent("projects", id);
+  const projectData = (data as Project[]).map((project) => ({
+    title: project.fields.title,
+    description: project.fields.description,
+    date: project.fields.date,
+    url: project.fields.url,
+    images: project.fields.images?.map((image) => ({
+      title: image.fields.title,
+      src: image.fields.file.url,
+    })),
+  }));
+  return projectData?.[0] || {};
+};
