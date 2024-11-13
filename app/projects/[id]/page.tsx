@@ -14,9 +14,9 @@ export default async function ProjectPage({ params }: { params: Params }) {
     <div>
       <Row xs={1} sm={1} md={1} lg={2}>
         <Col>
-          <h2>
+          <h4>
             {project?.title as string} ({project.date})
-          </h2>
+          </h4>
           <div className={styles.projectDescription}>
             {project?.description as string}
           </div>
