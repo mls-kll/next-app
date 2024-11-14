@@ -3,9 +3,9 @@ import { getProjectDataById } from "@/utils/get-content";
 import { Col, Row } from "react-bootstrap";
 import styles from "./projects.module.scss";
 
-type Params = {
+type Params = Promise<{
   id: string;
-};
+}>;
 export default async function ProjectPage({ params }: { params: Params }) {
   const { id } = await params;
   const project = await getProjectDataById(id);
